@@ -3,8 +3,11 @@ import java.util.Arrays;
 
 public class RunCalc {
     public static void main(String[] args) throws IOException {
+        System.out.println("Калькулятор производит базовые математические операции с арабскими (от 1 до 10) " +
+                "и римскими (от I до X) цифрами. \nДанные принимаются в формате 'первая цифра - пробел - вторая цифра' и нажатие Enter " +
+                "завершает вычисление. \nОдновременно принимается только одна система счисления.");
         Calculator calculator = new Calculator();
-        int exStarter = 0;
+        String exStarter;
 
         try {
             int first = Arrays.asList(calculator.inputRom).indexOf(calculator.firstValue) + 1;
@@ -25,8 +28,8 @@ public class RunCalc {
                     case "/":
                         System.out.println(calculator.arabicToRoman(first / second));
                 }
-            }else exStarter = Integer.parseInt(calculator.firstValue) * Integer.parseInt(calculator.secondValue);
-        }catch (NumberFormatException e){
+            }else exStarter = calculator.arabicToRoman(first) +  calculator.arabicToRoman(second);
+        }catch (IllegalArgumentException e){
             try {
                 int first = Integer.parseInt(calculator.firstValue);
                 int second = Integer.parseInt(calculator.secondValue);
@@ -46,7 +49,10 @@ public class RunCalc {
                         System.out.println(first / second);
                 }
             }catch (NumberFormatException e1){
-                System.out.println("Используются одновременно разные системы счисления");
+                if(calculator.exCount == 0)
+                {
+                    System.out.println("Используются одновременно разные системы счисления");
+                }
             }
         }
     }

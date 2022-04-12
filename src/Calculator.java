@@ -21,6 +21,7 @@ public class Calculator {
         mathOperations.add("*");
         mathOperations.add("/");
     }
+    int exCount = 0;
 
     public Calculator() throws IOException {
         reader = new BufferedReader(new InputStreamReader(System.in));
@@ -29,7 +30,10 @@ public class Calculator {
         if (input.length == 3 && mathOperations.contains(input[1])){
             firstValue = input[0];
             secondValue = input[2];
-        }else System.out.println("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+        }else {
+            System.out.println("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+            exCount++;
+        }
         reader.close();
     }
 

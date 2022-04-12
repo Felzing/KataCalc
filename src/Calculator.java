@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -12,13 +13,24 @@ public class Calculator {
     public String[] input;
     public BufferedReader reader;
 
+    List<String> mathOperations;
+    void mathOpsInit(){
+        mathOperations = new ArrayList<>();
+        mathOperations.add("+");
+        mathOperations.add("-");
+        mathOperations.add("*");
+        mathOperations.add("/");
+    }
+
     public Calculator() throws IOException {
         reader = new BufferedReader(new InputStreamReader(System.in));
         input = reader.readLine().split(" ");
-        if (input.length == 3){
+        mathOpsInit();
+        if (input.length == 3 && mathOperations.contains(input[1])){
             firstValue = input[0];
             secondValue = input[2];
         }else System.out.println("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+        reader.close();
     }
 
     public String arabicToRoman(int number) {

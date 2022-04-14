@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fde7734-809f-4795-9fe3-ba974b75e8fb" name="Changes" comment="2 St">
+    <list default="true" id="1fde7734-809f-4795-9fe3-ba974b75e8fb" name="Changes" comment="Final">
+      <change afterPath="$PROJECT_DIR$/src/IllegalInputExeption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IllegalRomanNumberExeption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RunCalc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunCalc.java" afterDir="false" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,7 +39,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/felzing/IdeaProjects/KataCalc"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -89,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649791584986</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final">
+      <created>1649793112939</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649793112939</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +117,7 @@
     <MESSAGE value="Start" />
     <MESSAGE value="1 St" />
     <MESSAGE value="2 St" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 St" />
+    <MESSAGE value="Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final" />
   </component>
 </project>
